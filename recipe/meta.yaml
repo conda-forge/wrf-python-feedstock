@@ -16,27 +16,20 @@ build:
 
 requirements:
   build:
-    - pip
+    - setuptools
     - numpy x.x
     - wrapt
     - m2w64-toolchain  # [win]
     - gcc  # [unix]
-    - libgcc  # [unix]
     - python
-    - vc 9  # [win and py27]
-    - vc 10  # [win and py34]
-    - vc 14  # [win and py>=35]
   run:
     - numpy x.x
     - python
     - wrapt 
     - m2w64-toolchain  # [win]
-    - gcc  # [unix]
-    - libgcc  # [unix]
+    - libgfortran  # [unix]
+    - libgcc  # [linux]
     - xarray
-    - vc 9  # [win and py27]
-    - vc 10  # [win and py34]
-    - vc 14  # [win and py>=35]
 
 test:
   requires:
@@ -46,7 +39,8 @@ test:
 
 about:
   home: https://github.com/NCAR/wrf-python
-  license: "NCL Source Code"
+  license: "UCAR"
+  license_file: '{{ environ["RECIPE_DIR"] }}/LICENSE' 
   summary: "Diagnostic and interpolation routines for WRF-ARW data."
 
 extra:
