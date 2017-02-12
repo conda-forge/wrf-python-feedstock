@@ -3,7 +3,7 @@ About wrf-python
 
 Home: https://github.com/NCAR/wrf-python
 
-Package license: NCL Source Code
+Package license: UCAR
 
 Feedstock license: BSD 3-Clause
 
