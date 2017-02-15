@@ -12,7 +12,7 @@ source:
 build:
   number: 2 
   detect_binary_files_with_prefix: true
-  skip: True  # [not win32]
+  skip: True  # [not win32 or (win and py>=35)]
 
 requirements:
   build:
