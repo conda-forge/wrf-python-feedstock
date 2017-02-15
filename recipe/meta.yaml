@@ -19,14 +19,16 @@ requirements:
     - setuptools
     - numpy x.x
     - wrapt
-    - m2w64-toolchain  # [win]
+    - m2w64-toolchain  # [win64]
+    - mingwpy  # [win32]
     - gcc  # [unix]
     - python
   run:
     - numpy x.x
     - python
     - wrapt 
-    - m2w64-toolchain  # [win]
+    - m2w64-toolchain  # [win64]
+    - mingwpy  # [win32]
     - libgfortran  # [unix]
     - libgcc  # [unix]
     - xarray
