@@ -19,11 +19,6 @@ environment:
       CONDA_PY: 27
       CONDA_INSTALL_LOCN: C:\\Miniconda
 
-    - TARGET_ARCH: x86
-      CONDA_NPY: 112
-      CONDA_PY: 27
-      CONDA_INSTALL_LOCN: C:\\Miniconda
-
 
 # We always use a 64-bit machine, but can build x86 distributions
 # with the TARGET_ARCH variable.
