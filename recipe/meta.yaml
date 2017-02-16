@@ -10,23 +10,23 @@ source:
   sha256: 7038de3e8cf77147cfafaa41e9797521dd1b4bff9130baacd25850ae38a7c3a3 
 
 build:
-  number: 2 
+  number: 3
   detect_binary_files_with_prefix: true
-  skip: True  # [win32 or (np>=112 and win) or (win and py>=35)]
+  skip: True  # [(np>=112 and win) or (win and py>=35)]
 
 requirements:
   build:
     - setuptools
     - numpy x.x
     - wrapt
-    - m2w64-toolchain  # [win]
+    - mingwpy  # [win]
     - gcc  # [unix]
     - python
   run:
     - numpy x.x
     - python
     - wrapt 
-    - m2w64-toolchain  # [win]
+    - mingwpy  # [win]
     - libgfortran  # [unix]
     - libgcc  # [unix]
     - xarray
