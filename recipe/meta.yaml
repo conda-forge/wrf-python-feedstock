@@ -1,4 +1,4 @@
-{% set version = "1.0b2" %}
+{% set version = "1.0b3" %}
 
 package:
   name: wrf-python
@@ -7,10 +7,10 @@ package:
 source:
   fn: wrf-python-{{ version }}.tar.gz
   url: https://github.com/NCAR/wrf-python/archive/{{ version }}.tar.gz
-  sha256: 7038de3e8cf77147cfafaa41e9797521dd1b4bff9130baacd25850ae38a7c3a3 
+  sha256: 6fc6a268d91129ba3c16facb1b53194a551d6336582a1f2162ced584e646aa7e
 
 build:
-  number: 3
+  number: 0
   detect_binary_files_with_prefix: true
   skip: True  # [(win and py>=35)]
 
@@ -29,11 +29,17 @@ requirements:
     - mingwpy  # [win]
     - libgfortran  # [unix]
     - libgcc  # [unix]
-    - xarray
 
 test:
+  requires:
+    - netcdf4
+    - xarray
+  source_files:
+    - test/ci_tests
   imports:
-    - wrf 
+    - wrf
+  commands:
+    - cd test/ci_tests && python utests.py 
 
 about:
   home: https://github.com/NCAR/wrf-python
