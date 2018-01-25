@@ -24,8 +24,8 @@ requirements:
     - gcc # [unix] 
   run:
     - setuptools
-    - numpy >= 1.11  # [unix]
-    - numpy >= 1.14  # [win] 
+    - numpy >=1.11  # [unix]
+    - numpy >=1.14  # [win] 
     - python
     - wrapt 
     - m2w64-gcc-libs  # [win]
