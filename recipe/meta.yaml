@@ -22,6 +22,7 @@ requirements:
     - wrapt
     - m2w64-toolchain  # [win]
     - gcc  # [unix] 
+    - libgfortran  # [osx]
   run:
     - setuptools
     - numpy >=1.11  # [unix]
