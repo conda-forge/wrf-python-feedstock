@@ -2,7 +2,7 @@
 
 cd fortran/build_help
 if [ `uname` == Darwin ]; then
-    gfortran -o sizes -fopenmp omp_sizes.f90 -Wl,-rpath.${CONDA_PREFIX}/lib
+    gfortran -o sizes -fopenmp omp_sizes.f90 -Wl,-rpath,${CONDA_PREFIX}/lib
 else
     gfortran -o sizes -fopenmp omp_sizes.f90
 fi
