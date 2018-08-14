@@ -22,13 +22,11 @@ requirements:
   host:
     - setuptools
     - python
-    - numpy         # [unix]
-    - numpy         # [win]
+    - numpy
     - wrapt
   run:
     - setuptools
-    - {{ pin_compatible('numpy') }}   # [unix]
-    - {{ pin_compatible('numpy') }}   # [win]
+    - {{ pin_compatible('numpy') }}
     - python
     - wrapt
     - xarray
@@ -57,4 +55,3 @@ extra:
     - marylhaley
     - david-ian-brown
     - khallock
-
