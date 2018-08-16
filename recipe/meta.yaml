@@ -15,14 +15,14 @@ build:
 
 requirements:
   build:
-    - {{ compiler('fortran') }}        # [unix]
+    - {{ compiler('fortran') }}  # [unix]
     - {{ compiler('m2w64_fortran') }}  # [win]
-    - {{ compiler('c') }}        # [unix]
-    - {{ compiler('m2w64_c') }}  # [win]
+    - {{ compiler('c') }}
   host:
     - setuptools
     - python
-    - numpy
+    - numpy  # [unix]
+    - numpy 1.14  # [win]
     - wrapt
   run:
     - setuptools
