@@ -22,11 +22,12 @@ requirements:
     - setuptools
     - python
     - numpy  # [unix]
-    - numpy 1.14  # [win]
+    - numpy 1.14.*  # [win]
     - wrapt
   run:
     - setuptools
-    - {{ pin_compatible('numpy') }}
+    - numpy  # [unix]
+    - numpy >=1.14  # [win]
     - python
     - wrapt
     - xarray
