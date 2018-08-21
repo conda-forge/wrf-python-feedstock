@@ -7,31 +7,29 @@ package:
 source:
   fn: wrf-python-{{ version }}.tar.gz
   url: https://github.com/NCAR/wrf-python/archive/{{ version }}.tar.gz
-  sha256: 8b6b57769d4c3d4468d44ad2223232b27d93325838ebb5cfdee6d565044f294b 
+  sha256: 8b6b57769d4c3d4468d44ad2223232b27d93325838ebb5cfdee6d565044f294b
 
 build:
-  number: 0
+  number: 1
   detect_binary_files_with_prefix: true
 
 requirements:
   build:
+    - {{ compiler('fortran') }}  # [unix]
+    - {{ compiler('m2w64_fortran') }}  # [win]
+    - {{ compiler('c') }}
+  host:
     - setuptools
     - python
-    - numpy 1.11.*  # [unix]
+    - numpy  # [unix]
     - numpy 1.14.*  # [win]
     - wrapt
-    - m2w64-toolchain  # [win]
-    - gcc  # [unix] 
-    - libgfortran  # [osx]
   run:
     - setuptools
-    - numpy >=1.11  # [unix]
-    - numpy >=1.14  # [win] 
+    - numpy  # [unix]
+    - numpy >=1.14  # [win]
     - python
-    - wrapt 
-    - m2w64-gcc-libs  # [win]
-    - libgfortran  # [unix]
-    - libgcc  # [unix]
+    - wrapt
     - xarray
 
 test:
@@ -44,12 +42,12 @@ test:
   imports:
     - wrf
   commands:
-    - cd test/ci_tests && python utests.py 
+    - cd test/ci_tests && python utests.py
 
 about:
   home: https://github.com/NCAR/wrf-python
   license: "UCAR"
-  license_file: '{{ environ["RECIPE_DIR"] }}/LICENSE' 
+  license_file: '{{ environ["RECIPE_DIR"] }}/LICENSE'
   summary: "Diagnostic and interpolation routines for WRF-ARW data."
 
 extra:
@@ -58,4 +56,3 @@ extra:
     - marylhaley
     - david-ian-brown
     - khallock
-    
