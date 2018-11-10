@@ -2,14 +2,14 @@
 
 cd fortran/build_help
 if [ `uname` == Darwin ]; then
-    gfortran -o sizes -fopenmp omp_sizes.f90 -Wl,-rpath,${CONDA_PREFIX}/lib
+    $FC -o sizes -fopenmp omp_sizes.f90 -Wl,-rpath,${CONDA_PREFIX}/lib
 else
-    gfortran -o sizes -fopenmp omp_sizes.f90
+    $FC -o sizes -fopenmp omp_sizes.f90
 fi
 python sub_sizes.py
 
 cd ..
-gfortran -E ompgen.F90 -fopenmp -cpp -o omp.f90
+$FC -E ompgen.F90 -fopenmp -cpp -o omp.f90
 f2py *.f90 -m _wrffortran -h wrffortran.pyf --overwrite-signature 
 cd ..
 
