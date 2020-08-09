@@ -1,10 +1,6 @@
-appveyor:
-  secure: {BINSTAR_TOKEN: tumuXLL8PU75WMnRDemRy02ruEq2RpNxeK3dz0MjFssnosPm2v4EFjfNB4PTotA1}
 compiler_stack: comp7
 max_py_ver: '37'
 max_r_ver: '35'
-travis:
-  secure: {BINSTAR_TOKEN: UDXk1H7i30SGgPbex8Ek/Unz3YZmfTUufKu55DYvOml0BcNPZW8aPC5CQnCcS1OJAt8SRyEYjOgEggUnZgdPhIWKiWbZ1s9lao0oVOzPsQFshaJCG9GY/reZRnlz2kxHwxIFcjmk0sjvgx0gLhE1GcRoF4Y9G08jvNkRD1WWDI+990dKkfhiBBqBJX5T8iFt2qV6WK2LMaOwvw2VZx/XrJ5TmaKCAM2JDH0Ja/tK203uM/w2Xkg7Ji9RuzCOtinWe7NzEfMnZKpKM6nC+73NY/jwQCxjO5Uj8h6+tamK+UmgKmY8VspbEW3HvHubP8vRa04ZT8yF8eORX7WBuW8/q6bp+qjr3e22/+pZT/qIXQydJGMYC7ozgL1PgVf+xCK3vSQuxpkW5hF/WbalW1dJnO4lyYlj0/SETVZ/7HhUmr3iWmucv0zxn3uSSInoT2kS/a+szBOV/mN5WsvaXyQDaNFLEatVrqn6VJNskLHxu/t6+vM3LYbamB0BGaW9T9LS86DcTwkzk8N2PU6blWFUlVuJNmcoPKCmPZUxz6Y1Pn0HLHbyzOaMfWw40lI+pyWVjOrKJUzLnIK52KaTDuxajx125ACDFHYiLEklW7CERI/hixqs2Pg0Yn4on6WYboZZPoZI/ZCmlZod2iEnKjdCn05pdi1Ord7/UOyAQXh/ybA=}
 provider:
   win: azure
 conda_forge_output_validation: true
