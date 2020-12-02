@@ -1,4 +1,4 @@
-{% set version = "1.3.2" %}
+{% set version = "1.3.2.5" %}
 
 package:
   name: wrf-python
@@ -7,10 +7,10 @@ package:
 source:
   fn: wrf-python-{{ version }}.tar.gz
   url: https://github.com/NCAR/wrf-python/archive/{{ version }}.tar.gz
-  sha256: 1c228548f88848689168d0a4bc41a531123c87f9c552fe75fb1eadd091d3ad26 
+  sha256: 8e54b2bca0fb095d9f94094cbe1463d74a351c5004930f4411fb963634589db4
 
 build:
-  number: 2
+  number: 0
   detect_binary_files_with_prefix: true
 
 requirements:
@@ -45,12 +45,11 @@ test:
 
 about:
   home: https://github.com/NCAR/wrf-python
-  license: "Apache-2.0"
+  license: Apache-2.0
   license_file: LICENSE
-  summary: "Diagnostic and interpolation routines for WRF-ARW data."
+  summary: Diagnostic and interpolation routines for WRF-ARW data.
 
 extra:
   recipe-maintainers:
-    - bladwig1
-    - marylhaley
-    - khallock
+    - michaelavs
+    - erogluorhan
