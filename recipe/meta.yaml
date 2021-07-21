@@ -22,11 +22,11 @@ requirements:
     - setuptools
     - python
     - numpy 1.19.*  # [unix]
-    - numpy 1.14.*  # [win]
+    - numpy 1.19.*  # [win]
     - wrapt
   run:
     - setuptools
-    - numpy =1.19.5
+    - numpy =1.19.*
     - python
     - wrapt
     - xarray
