@@ -22,7 +22,7 @@ requirements:
     - setuptools
     - python
     - numpy 1.19.*  # [unix]
-    - numpy 1.19.*  # [win]
+    - numpy 1.16.*  # [win]
     - wrapt
   run:
     - setuptools
