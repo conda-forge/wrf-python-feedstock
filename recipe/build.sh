@@ -16,6 +16,6 @@ cd ..
 
 $PYTHON setup.py config_fc --f90flags="-mtune=generic -fopenmp" build_ext --libraries="gomp" build
 
-$PYTHON setup.py install --single-version-externally-managed --record=record.txt
+$PYTHON -m pip install . -vv
 
 

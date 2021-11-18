@@ -12,6 +12,6 @@ IF %ARCH% == 64 (
     CALL %PYTHON% setup.py config_fc --f90flags="-O2 -mtune=generic -fopenmp -mincoming-stack-boundary=2" build_ext --libraries="gomp" build --compiler=msvc --fcompiler=gnu95
 )
 
-CALL %PYTHON% setup.py install --single-version-externally-managed --record=record.txt
+CALL %PYTHON% -m pip install . -vv
 
 

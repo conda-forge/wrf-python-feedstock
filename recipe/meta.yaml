@@ -20,6 +20,7 @@ requirements:
   host:
     - setuptools
     - python
+    - pip
     - numpy
   run:
     - {{ pin_compatible('numpy') }}
