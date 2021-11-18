@@ -21,9 +21,11 @@ requirements:
     - setuptools
     - python
     - pip
-    - numpy
+    - numpy  # [not win]
+    - numpy 1.14.*  # [win]
   run:
     - {{ pin_compatible('numpy') }}
+    - numpy =1.19.5  # [win]
     - python
     - wrapt
     - xarray
