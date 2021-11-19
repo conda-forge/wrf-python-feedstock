@@ -2,4 +2,4 @@ provider:
   win: azure
 conda_forge_output_validation: true
 azure:
-  store_build_artifacts: False
+  store_build_artifacts: True
