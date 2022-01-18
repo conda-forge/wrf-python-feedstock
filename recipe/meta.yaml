@@ -21,6 +21,8 @@ requirements:
     - setuptools
     - python
     - numpy
+    # upstream has it as a requirement
+    - wrapt
   run:
     - {{ pin_compatible('numpy') }}
     - python
