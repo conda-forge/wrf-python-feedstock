@@ -6,12 +6,5 @@ cd ..
 CALL gfortran -E ompgen.F90 -cpp -fopenmp -o omp.f90
 cd ..
 
-IF %ARCH% == 64 (
-    CALL %PYTHON% setup.py config_fc --f90flags="-O2 -mtune=generic -fopenmp" build_ext --libraries="gomp" build --compiler=msvc --fcompiler=gnu95       
-) ELSE (
-    CALL %PYTHON% setup.py config_fc --f90flags="-O2 -mtune=generic -fopenmp -mincoming-stack-boundary=2" build_ext --libraries="gomp" build --compiler=msvc --fcompiler=gnu95
-)
-
-CALL %PYTHON% setup.py install --single-version-externally-managed --record=record.txt
-
+CALL %PYTHON% setup.py config_fc --f90flags="-O2 -mtune=generic -fopenmp" build_ext --libraries="gomp" build --compiler=mingw32 --fcompiler=gnu95 install
 

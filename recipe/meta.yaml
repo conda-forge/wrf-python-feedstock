@@ -5,12 +5,11 @@ package:
   version: {{ version }}
 
 source:
-  fn: wrf-python-{{ version }}.tar.gz
   url: https://github.com/NCAR/wrf-python/archive/{{ version }}.tar.gz
   sha256: e137f95a02cc25629bb686d93e31068fd0f76150b3a9fabd913dd19caf9ddaf7
 
 build:
-  number: 0
+  number: 1
   detect_binary_files_with_prefix: true
 
 requirements:
@@ -21,19 +20,17 @@ requirements:
   host:
     - setuptools
     - python
-    - numpy 1.19.*  # [unix]
-    - numpy 1.14.*  # [win]
+    - numpy
+    # upstream has it as a requirement
     - wrapt
   run:
-    - setuptools
-    - numpy =1.19.5
+    - {{ pin_compatible('numpy') }}
     - python
     - wrapt
     - xarray
 
 test:
   requires:
-    - setuptools
     - netcdf4
     - xarray
   source_files:
@@ -51,5 +48,6 @@ about:
 
 extra:
   recipe-maintainers:
+    - akrherz
     - michaelavs
     - erogluorhan
