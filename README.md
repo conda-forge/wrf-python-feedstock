@@ -241,6 +241,6 @@ Feedstock Maintainers
 
 * [@akrherz](https://github.com/akrherz/)
 * [@erogluorhan](https://github.com/erogluorhan/)
+* [@marodrig](https://github.com/marodrig/)
 * [@michaelavs](https://github.com/michaelavs/)
-* [marodrig](https://github.com/marodrig)
 
