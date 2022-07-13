@@ -9,7 +9,7 @@ source:
   sha256: 334aa79ce3c608ca064c55491f249dd7c039ab22e20324a9e16d9ea015ce1fae
 
 build:
-  number: 1
+  number: 2
   detect_binary_files_with_prefix: true
 
 requirements:
@@ -51,3 +51,4 @@ extra:
     - akrherz
     - michaelavs
     - erogluorhan
+    - marodrig # M. Rodriguez https://github.com/marodrig
