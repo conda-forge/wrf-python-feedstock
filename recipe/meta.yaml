@@ -18,6 +18,7 @@ requirements:
     - {{ compiler('fortran') }}  # [unix]
     - {{ compiler('m2w64_fortran') }}  # [win]
     - {{ compiler('c') }}
+    - {{ stdlib("c") }}
   host:
     - setuptools
     - python
