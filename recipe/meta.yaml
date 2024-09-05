@@ -9,14 +9,16 @@ source:
   sha256: 334aa79ce3c608ca064c55491f249dd7c039ab22e20324a9e16d9ea015ce1fae
 
 build:
-  number: 4
+  number: 5
   detect_binary_files_with_prefix: true
+  skip: True  # [py==312]
 
 requirements:
   build:
     - {{ compiler('fortran') }}  # [unix]
     - {{ compiler('m2w64_fortran') }}  # [win]
     - {{ compiler('c') }}
+    - {{ stdlib("c") }}
   host:
     - setuptools
     - python
