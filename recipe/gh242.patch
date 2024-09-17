@@ -1,0 +1,26 @@
+--- wrf-python-1.3.4.1.orig/fortran/ompgen.F90.template	2024-09-04 21:50:53.013997880 -0500
++++ wrf-python-1.3.4.1/fortran/ompgen.F90.template	2024-09-17 09:15:20.266787602 -0500
+@@ -19,6 +19,10 @@
+     INTEGER(KIND=4), PARAMETER :: fomp_sched_guided = 3
+     INTEGER(KIND=4), PARAMETER :: fomp_sched_auto = 4
+ #endif
++     contains
++     logical function have_omp_constants()
++         have_omp_constants = .true.
++     end function have_omp_constants
+ 
+ END MODULE omp_constants
+ 
+--- wrf-python-1.3.4.1.orig/fortran/wrf_constants.f90	2024-09-04 21:50:53.015997900 -0500
++++ wrf-python-1.3.4.1/fortran/wrf_constants.f90	2024-09-17 09:15:51.187876711 -0500
+@@ -69,6 +69,10 @@
+     REAL(KIND=8), PARAMETER :: EXPON =  RD*USSALR/G
+     REAL(KIND=8), PARAMETER :: EXPONI =  1./EXPON
+ 
++     contains
++     logical function have_wrf_constants()
++         have_wrf_constants = .true.
++     end function have_wrf_constants
+ 
+ END MODULE wrf_constants
+ 
