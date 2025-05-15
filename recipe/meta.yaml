@@ -11,7 +11,7 @@ source:
 build:
   number: 0
   detect_binary_files_with_prefix: true
-  skip: true  # [py==312]
+  skip: true  # [py==313]
 
 requirements:
   build:
@@ -23,6 +23,7 @@ requirements:
     - setuptools
     - pip
     - python
+    - python-build
     - numpy
     # upstream has it as a requirement
     - wrapt
