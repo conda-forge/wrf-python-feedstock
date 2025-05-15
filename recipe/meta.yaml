@@ -20,6 +20,8 @@ requirements:
     - {{ compiler('m2w64_fortran') }}  # [win]
     - {{ compiler('c') }}
     - {{ stdlib("c") }}
+    - cmake
+    - make
   host:
     - setuptools
     - pip
