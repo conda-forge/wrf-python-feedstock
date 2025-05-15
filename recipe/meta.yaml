@@ -34,6 +34,7 @@ requirements:
   run:
     - {{ pin_compatible('numpy') }}
     - python
+    - setuptools
     - wrapt
     - xarray
 
