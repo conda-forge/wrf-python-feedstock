@@ -26,6 +26,7 @@ requirements:
     - python
     - python-build
     - numpy
+    - scikit-build-core
     # upstream has it as a requirement
     - wrapt
   run:
