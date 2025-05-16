@@ -21,6 +21,7 @@ requirements:
     - {{ compiler('c') }}
     - cmake
     - make  # [unix]
+    - ninja  # [win]
   host:
     - setuptools
     - pip
