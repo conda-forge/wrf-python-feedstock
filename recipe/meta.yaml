@@ -12,8 +12,8 @@ build:
   number: 0
   detect_binary_files_with_prefix: true
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-  # script_env:
-  #  - SKBUILD_CMAKE_ARGS=-DCMAKE_Fortran_COMPILER=flang  # [win]
+  script_env:
+    - SKBUILD_CMAKE_ARGS=-DCMAKE_Fortran_COMPILER=gfortran  # [win]
   skip: true  # [py==313]
 
 requirements:
