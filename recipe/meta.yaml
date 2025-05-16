@@ -11,6 +11,8 @@ source:
 build:
   number: 0
   detect_binary_files_with_prefix: true
+  script_env:
+    - FC=gfortran  # [win]
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
   skip: true  # [py==313]
 
