@@ -9,7 +9,7 @@ source:
   sha256: 831600abbf4037c33a55c11ca9da5f8ee97b8b0276c205de8ab66cef85ff3589
 
 build:
-  number: 0
+  number: 1
   detect_binary_files_with_prefix: true
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
   script_env:
@@ -41,7 +41,6 @@ requirements:
     # upstream has it as a requirement
     - wrapt
   run:
-    - {{ pin_compatible('numpy') }}
     - python
     - setuptools
     - wrapt
