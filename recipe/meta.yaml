@@ -9,7 +9,7 @@ source:
   sha256: 975d7d128b15f5afea2245cab3a4929647c4295db3d440f366adf296afd9f766
 
 build:
-  number: 0
+  number: 1
   detect_binary_files_with_prefix: true
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
   script_env:
