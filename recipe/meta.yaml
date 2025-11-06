@@ -15,7 +15,7 @@ build:
   script_env:
     - SKBUILD_CMAKE_ARGS=-DCMAKE_Fortran_COMPILER=gfortran  # [win]
   # windows disabled due to cmake being unable to find a fortran compiler
-  skip: true  # [py==313 or win]
+  skip: true  # [win]
 
 requirements:
   build:
