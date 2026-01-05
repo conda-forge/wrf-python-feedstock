@@ -11,7 +11,7 @@ source:
 build:
   number: 1
   detect_binary_files_with_prefix: true
-  script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation -Ccmake.define.CMAKE_Fortran_COMPILER=$FC
+  script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation -Ccmake.define.CMAKE_Fortran_COMPILER=flang
 
 requirements:
   build:
