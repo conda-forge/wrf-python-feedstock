@@ -13,7 +13,7 @@ build:
   detect_binary_files_with_prefix: true
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
   script_env:
-    - SKBUILD_CMAKE_ARGS=-DCMAKE_Fortran_COMPILER=$FC  # [win]
+    - CMAKE_ARGS=-DCMAKE_Fortran_COMPILER:FILEPATH=%BUILD_PREFIX%\Library\mingw-w64\bin\x86_64-w64-mingw32-gfortran.exe  # [win]
 
 requirements:
   build:
