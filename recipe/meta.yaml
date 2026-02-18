@@ -9,7 +9,7 @@ source:
   sha256: 48f360e3319c782e44653bc1e907842724873561c17dbbf1fe56ff625d3dab35
 
 build:
-  number: 1
+  number: 2
   detect_binary_files_with_prefix: true
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
   script_env:
@@ -19,17 +19,12 @@ build:
 
 requirements:
   build:
-    - {{ compiler('fortran') }}  # [unix]
-    - {{ stdlib("c") }}  # [unix]
-    - {{ compiler('c') }}  # [unix]
+    - {{ compiler('fortran') }}
+    - {{ stdlib('c') }}
+    - {{ compiler('c') }}
     - cmake
-    - make  # [unix]
+    - make  # [not win]
     - ninja  # [win]
-    - {{ compiler('m2w64_c') }}  # [win]
-    - {{ stdlib("m2w64_c") }}    # [win]
-    - {{ compiler('m2w64_fortran') }}  # [win]
-    - m2-make  # [win]
-    - m2-which  # [win]
 
   host:
     - setuptools
