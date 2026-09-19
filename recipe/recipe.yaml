@@ -13,7 +13,7 @@ source:
 
 build:
   # windows disabled due to cmake being unable to find a fortran compiler
-  number: 2
+  number: 3
   skip: win
   script:
     content: ${{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
@@ -28,8 +28,7 @@ requirements:
     - cmake
     - if: not win
       then: make
-    - if: win
-      then: ninja
+      else: ninja
   host:
     - setuptools
     - pip
